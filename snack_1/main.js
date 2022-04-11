@@ -68,36 +68,43 @@ const automobili = [
 
 // auto a benzina
 
-    const benzina = automobili.filter((auto) =>
-    {
-        if (auto.alimentazione.includes("Benzina")){
-            return true
-        } 
-        return false
-    })
+    // versione estesa
+    // const benzina = automobili.filter((auto) =>
+    // {
+    //     if (auto.alimentazione.includes("Benzina")){
+    //         return true
+    //     } 
+    //     return false
+    // })
 
+    // versione abbreviata
+    const benzina = automobili.filter((auto=>auto.alimentazione.includes("Benzina") ))
     console.log(benzina)
 
     // auto diesel
-    const diesel = automobili.filter((auto) =>
-    {
-        if (auto.alimentazione.includes("Diesel")){
-            return true
-        } 
-        return false
-    })
+    // const diesel = automobili.filter((auto) =>
+    // {
+    //     if (auto.alimentazione.includes("Diesel")){
+    //         return true
+    //     } 
+    //     return false
+    // })
 
+    // versione abbreviata
+    const diesel = automobili.filter((auto=>auto.alimentazione.includes("Diesel") ))
     console.log(diesel)
-   
-
+    
     // tutte le altre auto
 
-    const autoRimanenti = automobili.filter((auto) =>
-    {
-        if (!auto.alimentazione.includes("Diesel" ) &&!auto.alimentazione.includes("Benzina")){
-            return true
-        } 
-        return false
-    })
+    // const autoRimanenti = automobili.filter((auto) =>
+    // {
+    //     if (!auto.alimentazione.includes("Diesel" ) &&!auto.alimentazione.includes("Benzina")){
+    //         return true
+    //     } 
+    //     return false
+    // })
 
+    // versione abbreviata
+    const autoRimanenti = automobili.filter((auto=>!auto.alimentazione.includes("Diesel") && !!auto.alimentazione.includes("Benzina")))
     console.log(autoRimanenti)
+   

@@ -12,11 +12,13 @@ const animali = [
   ]
 
 //creo un nuovo array con la lista dei mammiferi usando filter
-  const mammiferi = animali.filter((animale) =>{
-    if (animale.classe.includes("mammiferi")){
-        return true
-    }
-    return false
-  })
+  // const mammiferi = animali.filter((animale) =>{
+  //   if (animale.classe.includes("mammiferi")){
+  //       return true
+  //   }
+  //   return false
+  // })
 
+  // versione abbreviata
+  const mammiferi = animali.filter((animale) => animale.classe.includes("mammiferi"))
   console.log(mammiferi)

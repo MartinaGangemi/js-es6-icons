@@ -17,7 +17,7 @@ const capitalizedAnime = anime.map((element) =>{
     const remain = lower.slice(1)
     
     // combino le due variabili per formare la parola completa
-     return  combined = firstLetterAnime + remain
+     combined = firstLetterAnime + remain
     
 })
 
